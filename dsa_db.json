@@ -1,0 +1,524 @@
+{
+    "variables_and_data_types": {
+        "defination": "A variable in programming is a named memory location that stores data. \n It acts as a symbolic name (identifier) for a value stored in the computer’s memory, so instead of remembering a memory address (like 0x7ffd93a4), we use human-readable names (age, salary, name, etc.). \n A variable always has: \n Name (Identifier) → e.g., age\n Value (Data Stored) → e.g., 20 \n Data Type (Kind of value it stores) → e.g., integer, string, float, etc.",
+        "explanation": "Think of variables as labeled boxes in a warehouse. Each box (variable) has a name and can only hold specific items (data types) like integers (boxes for whole numbers) or strings (boxes for text labels).",
+        "syntax": "<data_type> <variable_name> = <value>;",
+        "code": "Common Data Types in Python \t \n 🔹Integer (int) → Whole numbers (positive or negative) \n\tage = 20   # int \n 🔹Floating-point (float) → Decimal numbers \n\tpi = 3.14 \n 🔹String (str) → Sequence of characters (text) \n\tname = 'Sarfraz'\n 🔹Boolean (bool) → Logical values (True/False) \n\tis_student = True \n🔹List (list) → Ordered collection of items \n\t marks = [90, 85, 88] \n 🔹Tuple (tuple) → Ordered, immutable collection \n\tpoint = (10, 20)  \n🔹Dictionary (dict) → Key-value pairs \n\tstudent = {'name': 'Sarfraz', 'age': 20}"
+    },
+    "input_output": {
+        "defination": "Input/output (I/O) operations handle data flow between the program and external sources like users or files.",
+        "explanation": "It is Similar to a conversation: Input is listening to user questions (Scanner), output is giving answers (System.out).",
+        "syntax": "import java.util.Scanner;\nScanner scanner = new Scanner(System.in);\nString input = scanner.nextLine();",
+        "code": "import java.util.Scanner;\n\npublic class Main {\n  public static void main(String[] args) {\n    Scanner scanner = new Scanner(System.in);\n    \n    System.out.print(\"Enter your name: \");\n    String name = scanner.nextLine();  // Reads text input\n    \n    System.out.print(\"Enter your age: \");\n    int age = scanner.nextInt();  // Reads integer input\n    \n    System.out.println(\"Hello \" + name + \", you are \" + age + \" years old!\");\n    \n    scanner.close();  // Always close scanner\n  }\n}"
+    },
+    "operators": {
+        "defination": "Operators perform operations on variables/values (e.g., arithmetic, comparison, logical).",
+        "explanation": "Like math symbols: + adds numbers, == checks if two things are identical, && requires both conditions to be true.",
+        "syntax": "Arithmetic: +, -, *, /, %\nComparison: ==, !=, >, <\nLogical: &&, ||, !",
+        "code": "public class Main {\n  public static void main(String[] args) {\n    int a = 10, b = 4;\n    \n    // Arithmetic\n    int sum = a + b;          // 14\n    int difference = a - b;   // 6\n    \n    // Comparison\n    boolean isEqual = (a == b);  // false\n    boolean isGreater = (a > b); // true\n    \n    // Logical\n    boolean result = (a > 5) && (b < 5);  // true && true = true\n    \n    System.out.println(\"Sum: \" + sum);\n    System.out.println(\"a == b: \" + isEqual);\n    System.out.println(\"Result: \" + result);\n  }\n}"
+    },
+    "if_else": {
+        "defination": "Conditional statements execute different code blocks based on boolean conditions.",
+        "explanation": "Like choosing outfits: If it's raining (condition), wear a raincoat (code block); else, wear sunglasses.",
+        "syntax": "if (condition) { /* code */ } \nelse if (condition2) { /* code */ } \nelse { /* code */ }",
+        "code": "public class Main {\n  public static void main(String[] args) {\n    int score = 85;\n    \n    if (score >= 90) {\n      System.out.println(\"Grade: A\");\n    } else if (score >= 80) {\n      System.out.println(\"Grade: B\");  // This executes\n    } else if (score >= 70) {\n      System.out.println(\"Grade: C\");\n    } else {\n      System.out.println(\"Grade: F\");\n    }\n  }\n}"
+    },
+    "switch": {
+        "defination": "A multi-branch statement that executes code based on matching a value.",
+        "explanation": "Like a vending machine: You press button 'A3' (case), and it dispenses soda (code block).",
+        "syntax": "switch (variable) {\n  case value1: /* code */ break;\n  case value2: /* code */ break;\n  default: /* code */\n}",
+        "code": "public class Main {\n  public static void main(String[] args) {\n    int day = 4;  // 1=Mon, 2=Tue, ... 7=Sun\n    \n    switch (day) {\n      case 1:\n        System.out.println(\"Monday\");\n        break;\n      case 2:\n        System.out.println(\"Tuesday\");\n        break;\n      case 3:\n        System.out.println(\"Wednesday\");\n        break;\n      case 4:\n        System.out.println(\"Thursday\");  // Executes\n        break;\n      default:\n        System.out.println(\"Weekend\");\n    }\n  }\n}"
+    },
+    "for_loop": {
+        "defination": "A loop that repeats code a specific number of times using initialization, condition, and increment steps.",
+        "explanation": "Like counting repetitions in gym: Start at 1 (init), keep going until 10 (condition), count up by 1 each time (increment).",
+        "syntax": "for (init; condition; increment) { /* code */ }",
+        "code": "public class Main {\n  public static void main(String[] args) {\n    // Print numbers 1 to 5\n    for (int i = 1; i <= 5; i++) {\n      System.out.println(\"Count: \" + i);\n    }\n    \n    // Sum numbers 1-10\n    int sum = 0;\n    for (int j = 1; j <= 10; j++) {\n      sum += j;\n    }\n    System.out.println(\"Sum: \" + sum);  // Outputs 55\n  }\n}"
+    },
+    "while_loop": {
+        "defination": "A loop that repeats code while a condition remains true.",
+        "explanation": "Like eating cookies: While cookies are in the jar (condition), keep taking one (code block).",
+        "syntax": "while (condition) { /* code */ }",
+        "code": "public class Main {\n  public static void main(String[] args) {\n    int cookies = 5;\n    \n    // Eat cookies while available\n    while (cookies > 0) {\n      System.out.println(\"Eating cookie #\" + cookies);\n      cookies--;  // Decrement cookies\n    }\n    System.out.println(\"No cookies left!\");\n    \n    // Sum digits of a number\n    int num = 123, digitSum = 0;\n    while (num != 0) {\n      digitSum += num % 10;  // Get last digit\n      num /= 10;            // Remove last digit\n    }\n    System.out.println(\"Digit sum: \" + digitSum);  // 6\n  }\n}"
+    },
+    "do_while_loop": {
+        "defination": "A loop that executes code once, then repeats while the condition is true.",
+        "explanation": "Like trying a new food: Taste it once (code runs), then decide if you want more (condition check).",
+        "syntax": "do { /* code */ } while (condition);",
+        "code": "public class Main {\n  public static void main(String[] args) {\n    int count = 5;\n    \n    // Runs at least once\n    do {\n      System.out.println(\"Count: \" + count);\n      count++;\n    } while (count < 3);  // Condition false after first run\n    \n    // User menu example\n    Scanner scanner = new Scanner(System.in);\n    int choice;\n    do {\n      System.out.println(\"\\nMenu: 1. Play 2. Exit\");\n      choice = scanner.nextInt();\n      if (choice == 1) System.out.println(\"Game started!\");\n    } while (choice != 2);  // Exit when user chooses 2\n    scanner.close();\n  }\n}"
+    },
+    "arrays_1d": {
+        "defination": "A collection of elements of the same type stored in contiguous memory locations.",
+        "explanation": "Like a row of lockers: Each locker (index) holds one item (element), all lockers are same size (data type).",
+        "syntax": "<type>[] <name> = new <type>[size];",
+        "code": "public class Main {\n  public static void main(String[] args) {\n    // Create array\n    int[] numbers = new int[3];\n    \n    // Assign values\n    numbers[0] = 10;\n    numbers[1] = 20;\n    numbers[2] = 30;\n    \n    // Access elements\n    System.out.println(numbers[1]);  // 20\n    \n    // Initialize during creation\n    String[] fruits = {\"Apple\", \"Banana\", \"Cherry\"};\n    \n    // Loop through array\n    for (int i = 0; i < fruits.length; i++) {\n      System.out.println(fruits[i]);\n    }\n  }\n}"
+    },
+    "arrays_2d": {
+        "defination": "An array of arrays, representing a grid-like structure (rows and columns).",
+        "explanation": "Like a chessboard: Rows and columns where each cell holds a piece (element).",
+        "syntax": "<type>[][] <name> = new <type>[rows][columns];",
+        "code": "public class Main {\n  public static void main(String[] args) {\n    // 2x3 grid\n    int[][] matrix = new int[2][3];\n    \n    // Assign values\n    matrix[0][0] = 1; matrix[0][1] = 2; matrix[0][2] = 3;\n    matrix[1][0] = 4; matrix[1][1] = 5; matrix[1][2] = 6;\n    \n    // Initialize during creation\n    char[][] board = {\n      {'X', 'O', 'X'},\n      {'O', 'X', 'O'},\n      {'X', 'O', 'X'}\n    };\n    \n    // Nested loop traversal\n    for (int row = 0; row < board.length; row++) {\n      for (int col = 0; col < board[row].length; col++) {\n        System.out.print(board[row][col] + \" \");\n      }\n      System.out.println();  // New line after each row\n    }\n  }\n}"
+    },
+    "strings": {
+        "defination": "A sequence of characters. In Java, strings are immutable objects.",
+        "explanation": "Like a sentence in a book: Once written, you can't change individual letters (immutable), but you can write a new sentence.",
+        "syntax": "String <name> = \"text\";",
+        "code": "public class Main {\n  public static void main(String[] args) {\n    String greeting = \"Hello\";\n    \n    // Concatenation\n    String name = \"Alice\";\n    String message = greeting + \" \" + name + \"!\";  // \"Hello Alice!\"\n    \n    // Common methods\n    int length = message.length();      // 12\n    char firstChar = message.charAt(0); // 'H'\n    String upper = message.toUpperCase(); // \"HELLO ALICE!\"\n    \n    // Substring\n    String part = message.substring(0, 5);  // \"Hello\"\n    \n    // Comparison\n    boolean isEqual = greeting.equals(\"HELLO\");  // false (case-sensitive)\n    boolean ignoreCase = greeting.equalsIgnoreCase(\"HELLO\"); // true\n    \n    System.out.println(message);\n  }\n}"
+    },
+    "methods": {
+        "defination": "Reusable blocks of code that perform specific tasks. Defined with a name, parameters, and return type.",
+        "explanation": "Like a coffee machine: You provide inputs (coffee beans, water) and get a consistent output (coffee) each time.",
+        "syntax": "<return_type> <method_name>(<parameters>) { /* code */ return <value>; }",
+        "code": "public class Main {\n  \n  // Method definition\n  static int add(int a, int b) {\n    return a + b;\n  }\n  \n  // Void method (no return)\n  static void greet(String name) {\n    System.out.println(\"Hello, \" + name + \"!\");\n  }\n  \n  public static void main(String[] args) {\n    // Call methods\n    int sum = add(5, 3);  // Returns 8\n    greet(\"Bob\");         // Prints \"Hello, Bob!\"\n    \n    System.out.println(\"Sum: \" + sum);\n  }\n}"
+    },
+    "recursion": {
+        "defination": "A method that calls itself to solve smaller instances of the same problem.",
+        "explanation": "Like Russian nesting dolls: Open a doll (method call) to find a smaller doll inside (recursive call), until you reach the smallest (base case).",
+        "syntax": "return_type method() { if (base_case) return value; else return method(smaller_problem); }",
+        "code": "public class Main {\n  \n  // Factorial using recursion\n  static int factorial(int n) {\n    if (n == 0 || n == 1) {  // Base case\n      return 1;\n    }\n    return n * factorial(n - 1);  // Recursive call\n  }\n  \n  public static void main(String[] args) {\n    int result = factorial(5);  // 5! = 120\n    System.out.println(\"Factorial: \" + result);\n    \n    // Fibonacci sequence\n    System.out.println(\"Fibonacci(5): \" + fib(5));  // 5\n  }\n  \n  static int fib(int n) {\n    if (n <= 1) return n;\n    return fib(n-1) + fib(n-2);\n  }\n}"
+    },
+    "classes_objects": {
+        "defination": "Class: Blueprint for objects. Object: Instance of a class with state (fields) and behavior (methods).",
+        "explanation": "Class = Car design (attributes: color, model; behaviors: drive, brake). Object = Actual car made from that design.",
+        "syntax": "class ClassName { fields; methods; }\nClassName obj = new ClassName();",
+        "code": "// Define class\nclass Car {\n  // Fields\n  String color;\n  String model;\n  \n  // Constructor\n  Car(String color, String model) {\n    this.color = color;\n    this.model = model;\n  }\n  \n  // Method\n  void drive() {\n    System.out.println(model + \" is driving!\");\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    // Create object\n    Car myCar = new Car(\"Red\", \"SUV\");\n    \n    // Access fields and methods\n    System.out.println(\"Car color: \" + myCar.color);\n    myCar.drive();  // Outputs \"SUV is driving!\"\n  }\n}"
+    },
+    "inheritance": {
+        "defination": "A mechanism where a subclass inherits fields and methods from a superclass.",
+        "explanation": "Like family traits: Child (subclass) inherits features from parent (superclass) but can have unique characteristics too.",
+        "syntax": "class Subclass extends Superclass { /* additional features */ }",
+        "code": "// Superclass\nclass Animal {\n  void eat() {\n    System.out.println(\"Eating...\");\n  }\n}\n\n// Subclass\nclass Dog extends Animal {\n  void bark() {\n    System.out.println(\"Barking!\");\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Dog myDog = new Dog();\n    myDog.eat();   // Inherited method\n    myDog.bark();  // Own method\n  }\n}"
+    },
+    "encapsulation": {
+        "defination": "Bundling data (fields) and methods that operate on data into a single unit (class), restricting direct access to fields.",
+        "explanation": "Like a pill capsule: Medicine (data) is protected inside, accessed only through safe methods (capsule shell).",
+        "syntax": "Use private fields + public getter/setter methods.",
+        "code": "class Person {\n  // Private field\n  private String name;\n  \n  // Getter\n  public String getName() {\n    return name;\n  }\n  \n  // Setter\n  public void setName(String name) {\n    this.name = name;\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Person person = new Person();\n    person.setName(\"Alice\");  // Set via method\n    System.out.println(person.getName());  // Get via method\n  }\n}"
+    },
+    "abstraction": {
+        "defination": "Hiding implementation details and showing only essential features.",
+        "explanation": "Like driving a car: You use pedals and steering wheel (interface) without knowing engine mechanics (implementation).",
+        "syntax": "abstract class / interfaces",
+        "code": "// Abstract class\nabstract class Shape {\n  abstract double area();  // Abstract method (no body)\n}\n\nclass Circle extends Shape {\n  double radius;\n  \n  Circle(double r) { radius = r; }\n  \n  @Override\n  double area() {  // Implementation\n    return Math.PI * radius * radius;\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Shape s = new Circle(5.0);\n    System.out.println(\"Area: \" + s.area());  // Uses abstraction\n  }\n}"
+    },
+    "polymorphism": {
+        "defination": "Ability of an object to take many forms (e.g., method overriding, interfaces).",
+        "explanation": "Like a person: At work they're an employee (form), at home a parent (different form) - same person, different behaviors.",
+        "syntax": "Method overriding: Same method name, different implementation in subclass.",
+        "code": "class Animal {\n  void sound() {\n    System.out.println(\"Animal makes sound\");\n  }\n}\n\nclass Dog extends Animal {\n  @Override\n  void sound() {  // Method overriding\n    System.out.println(\"Dog barks\");\n  }\n}\n\nclass Cat extends Animal {\n  @Override\n  void sound() {\n    System.out.println(\"Cat meows\");\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Animal a1 = new Dog();  // Polymorphism\n    Animal a2 = new Cat();\n    \n    a1.sound();  // \"Dog barks\"\n    a2.sound();  // \"Cat meows\"\n  }\n}"
+    },
+    "exception_handling": {
+        "defination": "Mechanism to handle runtime errors using try-catch blocks.",
+        "explanation": "Like airbags in cars: When a crash (exception) occurs, airbags deploy (catch block) to handle it safely.",
+        "syntax": "try { /* risky code */ } \ncatch (ExceptionType e) { /* handle error */ } \nfinally { /* cleanup */ }",
+        "code": "public class Main {\n  public static void main(String[] args) {\n    try {\n      int[] arr = {1, 2, 3};\n      System.out.println(arr[5]);  // ArrayIndexOutOfBoundsException\n    } catch (ArrayIndexOutOfBoundsException e) {\n      System.out.println(\"Error: Index out of bounds!\");\n    } finally {\n      System.out.println(\"This always executes\");\n    }\n    \n    // Multiple catch blocks\n    try {\n      int num = Integer.parseInt(\"abc\");  // NumberFormatException\n    } catch (NumberFormatException e) {\n      System.out.println(\"Invalid number format\");\n    } catch (Exception e) {\n      System.out.println(\"General error\");\n    }\n  }\n}"
+    },
+    "interfaces": {
+        "defination": "A reference type containing abstract methods (no implementation). Classes implement interfaces.",
+        "explanation": "Like a USB port specification: Defines how devices connect (method signatures), actual devices (classes) implement the specs.",
+        "syntax": "interface InterfaceName { void method(); }\nclass ClassName implements InterfaceName { public void method() { /* code */ } }",
+        "code": "// Interface\ninterface Drawable {\n  void draw();  // Abstract method\n}\n\n// Implement interface\nclass Circle implements Drawable {\n  @Override\n  public void draw() {\n    System.out.println(\"Drawing circle\");\n  }\n}\n\nclass Rectangle implements Drawable {\n  @Override\n  public void draw() {\n    System.out.println(\"Drawing rectangle\");\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Drawable d1 = new Circle();  // Interface reference\n    Drawable d2 = new Rectangle();\n    \n    d1.draw();  // Calls Circle's draw\n    d2.draw();  // Calls Rectangle's draw\n  }\n}"
+    },
+    "abstract_classes": {
+        "defination": "A class that cannot be instantiated, often containing abstract methods (no implementation) and concrete methods.",
+        "explanation": "Like a vehicle blueprint: Defines common features (abstract methods like startEngine()) but isn't a usable vehicle itself.",
+        "syntax": "abstract class ClassName { abstract void method(); void concreteMethod() { /* code */ } }",
+        "code": "// Abstract class\nabstract class Vehicle {\n  abstract void startEngine();  // Abstract method\n  \n  void stopEngine() {  // Concrete method\n    System.out.println(\"Engine stopped\");\n  }\n}\n\nclass Car extends Vehicle {\n  @Override\n  void startEngine() {\n    System.out.println(\"Car engine started\");\n  }\n}\n\nclass Bike extends Vehicle {\n  @Override\n  void startEngine() {\n    System.out.println(\"Bike engine started\");\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Vehicle v1 = new Car();\n    Vehicle v2 = new Bike();\n    \n    v1.startEngine();  // Car's implementation\n    v2.startEngine();  // Bike's implementation\n    v1.stopEngine();   // Inherited concrete method\n  }\n}"
+    },
+    "file_handling": {
+        "defination": "Reading from and writing to files using Java I/O classes.",
+        "explanation": "Like storing/retrieving documents: Write saves data to a file (like saving a doc), Read loads data (like opening a doc).",
+        "syntax": "FileReader, BufferedReader, FileWriter, try-with-resources",
+        "code": "import java.io.*;\n\npublic class Main {\n  public static void main(String[] args) {\n    // Writing to a file\n    try (FileWriter writer = new FileWriter(\"data.txt\")) {\n      writer.write(\"Hello File Handling!\\n\");\n      writer.write(\"Second line\");\n    } catch (IOException e) {\n      e.printStackTrace();\n    }\n    \n    // Reading from a file\n    try (BufferedReader reader = new BufferedReader(new FileReader(\"data.txt\"))) {\n      String line;\n      while ((line = reader.readLine()) != null) {\n        System.out.println(line);\n      }\n    } catch (IOException e) {\n      e.printStackTrace();\n    }\n  }\n}"
+    },
+    "list_interface": {
+        "defination": "An ordered collection (sequence) allowing duplicate elements. Common implementations: ArrayList, LinkedList.",
+        "explanation": "Like a shopping list: Items are in order (indexed), can have duplicates (e.g., two milk entries), and you can add/remove items.",
+        "syntax": "List<Type> list = new ArrayList<>();\nlist.add(element); list.get(index); list.remove(index);",
+        "code": "import java.util.*;\n\npublic class Main {\n  public static void main(String[] args) {\n    List<String> fruits = new ArrayList<>();\n    \n    // Add elements\n    fruits.add(\"Apple\");\n    fruits.add(\"Banana\");\n    fruits.add(1, \"Mango\");  // Insert at index 1\n    \n    // Access elements\n    System.out.println(fruits.get(0));  // Apple\n    \n    // Iteration\n    for (String fruit : fruits) {\n      System.out.println(fruit);  // Apple, Mango, Banana\n    }\n    \n    // Remove element\n    fruits.remove(\"Banana\");\n    System.out.println(fruits.size());  // 2\n  }\n}"
+    },
+    "set_interface": {
+        "defination": "A collection that contains no duplicate elements. Common implementations: HashSet, TreeSet.",
+        "explanation": "Like a math set: Elements are unique (no duplicates), order doesn't matter in HashSet.",
+        "syntax": "Set<Type> set = new HashSet<>();\nset.add(element); set.contains(element);",
+        "code": "import java.util.*;\n\npublic class Main {\n  public static void main(String[] args) {\n    Set<Integer> numbers = new HashSet<>();\n    \n    // Add elements (duplicates ignored)\n    numbers.add(10);\n    numbers.add(20);\n    numbers.add(10);  // Duplicate - not added\n    \n    System.out.println(numbers.size());  // 2\n    \n    // Check membership\n    System.out.println(numbers.contains(20));  // true\n    \n    // TreeSet (sorted order)\n    Set<String> sortedSet = new TreeSet<>();\n    sortedSet.add(\"Banana\");\n    sortedSet.add(\"Apple\");\n    System.out.println(sortedSet);  // [Apple, Banana]\n  }\n}"
+    },
+    "map_interface": {
+        "defination": "A collection storing key-value pairs. Keys are unique. Common implementations: HashMap, TreeMap.",
+        "explanation": "Like a dictionary: Word (key) maps to definition (value). Keys are unique (no duplicate words).",
+        "syntax": "Map<KeyType, ValueType> map = new HashMap<>();\nmap.put(key, value); map.get(key);",
+        "code": "import java.util.*;\n\npublic class Main {\n  public static void main(String[] args) {\n    Map<String, Integer> ageMap = new HashMap<>();\n    \n    // Add key-value pairs\n    ageMap.put(\"Alice\", 25);\n    ageMap.put(\"Bob\", 30);\n    \n    // Access values\n    System.out.println(ageMap.get(\"Alice\"));  // 25\n    \n    // Check if key exists\n    System.out.println(ageMap.containsKey(\"Bob\"));  // true\n    \n    // Iterate over entries\n    for (Map.Entry<String, Integer> entry : ageMap.entrySet()) {\n      System.out.println(entry.getKey() + \": \" + entry.getValue());\n    }\n    \n    // TreeMap (sorted by keys)\n    Map<String, Integer> sortedMap = new TreeMap<>(ageMap);\n    System.out.println(sortedMap);  // {Alice=25, Bob=30}\n  }\n}"
+    },
+    "wrapper_classes": {
+        "defination": "Classes that convert primitive types (int, char) into objects (Integer, Character) for use in collections.",
+        "explanation": "Like gift-wrapping: Primitives are basic items, wrapper classes 'wrap' them to make them usable in object contexts.",
+        "syntax": "Integer num = 5;  // Autoboxing\nint n = num;     // Unboxing",
+        "code": "import java.util.ArrayList;\n\npublic class Main {\n  public static void main(String[] args) {\n    // Wrapper classes\n    Integer numObj = Integer.valueOf(10);  // Create Integer object\n    int numPrimitive = numObj.intValue();   // Convert to primitive\n    \n    // Autoboxing (automatic conversion)\n    ArrayList<Integer> list = new ArrayList<>();\n    list.add(5);  // Autoboxing: int -> Integer\n    \n    int value = list.get(0);  // Unboxing: Integer -> int\n    \n    // Useful methods\n    String numStr = \"123\";\n    int parsedNum = Integer.parseInt(numStr);  // Convert String to int\n    System.out.println(parsedNum * 2);        // 246\n  }\n}"
+    },
+    "lambda_expressions": {
+        "defination": "Short blocks of code implementing functional interfaces (single abstract method).",
+        "explanation": "Like a shortcut: Instead of writing full method definitions, use compact syntax for simple operations.",
+        "syntax": "(parameters) -> { body }",
+        "code": "import java.util.*;\n\npublic class Main {\n  public static void main(String[] args) {\n    List<String> names = Arrays.asList(\"Alice\", \"Bob\", \"Charlie\");\n    \n    // Lambda with forEach\n    names.forEach(name -> System.out.println(name));\n    \n    // Lambda with Runnable\n    Runnable r = () -> System.out.println(\"Running!\");\n    new Thread(r).start();\n    \n    // Sorting with lambda\n    Collections.sort(names, (a, b) -> a.length() - b.length());\n    System.out.println(names);  // [Bob, Alice, Charlie]\n  }\n}"
+    },
+    "stream_api": {
+        "defination": "Process sequences of elements (collections, arrays) using functional-style operations like filter, map, reduce.",
+        "explanation": "Like an assembly line: Data flows through operations (filter defective items, map to components, count final products).",
+        "syntax": "collection.stream().filter(condition).map(transform).collect(Collectors.toList());",
+        "code": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n  public static void main(String[] args) {\n    List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\n    \n    // Filter even numbers\n    List<Integer> evens = numbers.stream()\n                                .filter(n -> n % 2 == 0)\n                                .collect(Collectors.toList());\n    System.out.println(evens);  // [2,4]\n    \n    // Square each number\n    List<Integer> squares = numbers.stream()\n                                  .map(n -> n * n)\n                                  .collect(Collectors.toList());\n    System.out.println(squares);  // [1,4,9,16,25]\n    \n    // Sum using reduce\n    int sum = numbers.stream().reduce(0, (a, b) -> a + b);\n    System.out.println(\"Sum: \" + sum);  // 15\n  }\n}"
+    },
+    "complexity_analysis": {
+        "defination": "Evaluating algorithm efficiency by time (operations count) and space (memory usage) using Big O notation.",
+        "explanation": "Like comparing delivery speeds: O(1) = instant delivery, O(n) = time grows with packages, O(n\u00c2\u00b2) = time explodes for large orders.",
+        "syntax": "O(1), O(n), O(log n), O(n log n), O(n\u00c2\u00b2)",
+        "code": "public class Main {\n  // O(1) - Constant time\n  int getFirstElement(int[] arr) {\n    return arr[0];  // Single operation\n  }\n  \n  // O(n) - Linear time\n  int findSum(int[] arr) {\n    int sum = 0;\n    for (int num : arr) {  // Loop runs 'n' times\n      sum += num;\n    }\n    return sum;\n  }\n  \n  // O(n\u00c2\u00b2) - Quadratic time\n  void printPairs(int[] arr) {\n    for (int i = 0; i < arr.length; i++) {        // n times\n      for (int j = 0; j < arr.length; j++) {      // n times\n        System.out.println(arr[i] + \", \" + arr[j]);\n      }\n    }  // Total: n * n = n\u00c2\u00b2\n  }\n  \n  public static void main(String[] args) {\n    // Compare complexities\n    int[] data = {1,2,3,4,5};\n    \n    // O(1) is fastest for any input\n    // O(n) scales linearly\n    // O(n\u00c2\u00b2) becomes slow for large n\n  }\n}"
+    },
+    "recursion_basic": {
+        "defination": "Solving problems by breaking them into smaller self-similar subproblems with a base case to terminate.",
+        "explanation": "Like peeling an onion: Remove a layer (smaller problem) until you reach the core (base case).",
+        "syntax": "return_type func(params) { if (baseCase) return value; else return func(modified_params); }",
+        "code": "public class Main {\n  \n  // Sum of first n natural numbers\n  static int sum(int n) {\n    if (n == 1) {  // Base case\n      return 1;\n    }\n    return n + sum(n - 1);  // Recursive call\n  }\n  \n  // Factorial\n  static int factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n  }\n  \n  public static void main(String[] args) {\n    System.out.println(sum(5));      // 15\n    System.out.println(factorial(5)); // 120\n  }\n}"
+    },
+    "recursion_advanced": {
+        "defination": "Complex recursive techniques like backtracking, tree traversals, and divide-and-conquer algorithms.",
+        "explanation": "Like exploring a maze: Try a path (recursive call), backtrack if dead-end (undo choice), try next path.",
+        "syntax": "Combines recursion with state modification and backtracking.",
+        "code": "// Tower of Hanoi\npublic class Main {\n  static void towerOfHanoi(int n, char source, char dest, char aux) {\n    if (n == 1) {\n      System.out.println(\"Move disk 1 from \" + source + \" to \" + dest);\n      return;\n    }\n    towerOfHanoi(n - 1, source, aux, dest);  // Move n-1 disks to aux\n    System.out.println(\"Move disk \" + n + \" from \" + source + \" to \" + dest);\n    towerOfHanoi(n - 1, aux, dest, source);  // Move n-1 disks to dest\n  }\n  \n  public static void main(String[] args) {\n    towerOfHanoi(3, 'A', 'C', 'B');\n  }\n}"
+    },
+    "bubble_sort": {
+        "defination": "A simple sorting algorithm that repeatedly swaps adjacent elements if they are in the wrong order.",
+        "explanation": "Like bubbles rising in water: Lighter elements (smaller values) gradually 'bubble up' to their correct positions.",
+        "syntax": "for (i from 0 to n-1)\n  for (j from 0 to n-i-2)\n    if (arr[j] > arr[j+1]) swap(arr[j], arr[j+1])",
+        "code": "public class Main {\n  static void bubbleSort(int[] arr) {\n    int n = arr.length;\n    for (int i = 0; i < n-1; i++) {\n      for (int j = 0; j < n-i-1; j++) {\n        if (arr[j] > arr[j+1]) {\n          // Swap arr[j] and arr[j+1]\n          int temp = arr[j];\n          arr[j] = arr[j+1];\n          arr[j+1] = temp;\n        }\n      }\n    }\n  }\n  \n  public static void main(String[] args) {\n    int[] data = {64, 34, 25, 12, 22, 11, 90};\n    bubbleSort(data);\n    System.out.println(Arrays.toString(data)); // [11,12,22,25,34,64,90]\n  }\n}"
+    },
+    "insertion_sort": {
+        "defination": "Builds the sorted array one item at a time by inserting each element into its correct position.",
+        "explanation": "Like sorting playing cards: Pick one card at a time and insert it into its proper place among already sorted cards.",
+        "syntax": "for (i from 1 to n-1)\n  key = arr[i]\n  j = i-1\n  while (j >=0 && arr[j] > key)\n    arr[j+1] = arr[j]\n    j--\n  arr[j+1] = key",
+        "code": "public class Main {\n  static void insertionSort(int[] arr) {\n    for (int i = 1; i < arr.length; i++) {\n      int key = arr[i];\n      int j = i - 1;\n      \n      // Move elements greater than key to right\n      while (j >= 0 && arr[j] > key) {\n        arr[j + 1] = arr[j];\n        j--;\n      }\n      arr[j + 1] = key;  // Insert key in correct position\n    }\n  }\n  \n  public static void main(String[] args) {\n    int[] data = {12, 11, 13, 5, 6};\n    insertionSort(data);\n    System.out.println(Arrays.toString(data)); // [5,6,11,12,13]\n  }\n}"
+    },
+    "selection_sort": {
+        "defination": "Repeatedly finds the minimum element from unsorted part and puts it at the beginning.",
+        "explanation": "Like picking teams: Scan all players (unsorted list), select the shortest (min) for your team first (sorted part).",
+        "syntax": "for (i from 0 to n-2)\n  min_idx = i\n  for (j from i+1 to n-1)\n    if (arr[j] < arr[min_idx]) min_idx = j\n  swap(arr[i], arr[min_idx])",
+        "code": "public class Main {\n  static void selectionSort(int[] arr) {\n    for (int i = 0; i < arr.length-1; i++) {\n      int minIdx = i;\n      \n      // Find min in unsorted part\n      for (int j = i+1; j < arr.length; j++) {\n        if (arr[j] < arr[minIdx]) minIdx = j;\n      }\n      \n      // Swap with first unsorted element\n      int temp = arr[minIdx];\n      arr[minIdx] = arr[i];\n      arr[i] = temp;\n    }\n  }\n  \n  public static void main(String[] args) {\n    int[] data = {64, 25, 12, 22, 11};\n    selectionSort(data);\n    System.out.println(Arrays.toString(data)); // [11,12,22,25,64]\n  }\n}"
+    },
+    "merge_sort": {
+        "defination": "A divide-and-conquer algorithm that splits the array, sorts subarrays, and merges them back.",
+        "explanation": "Like sorting papers: Divide into small piles (trivial to sort), merge sorted piles by comparing top items.",
+        "syntax": "mergeSort(arr, l, r):\n  if l < r:\n    mid = (l+r)/2\n    mergeSort(arr, l, mid)\n    mergeSort(arr, mid+1, r)\n    merge(arr, l, mid, r)",
+        "code": "public class Main {\n  \n  static void merge(int[] arr, int l, int m, int r) {\n    // Sizes of subarrays\n    int n1 = m - l + 1;\n    int n2 = r - m;\n    \n    // Temp arrays\n    int[] L = new int[n1];\n    int[] R = new int[n2];\n    \n    // Copy data\n    for (int i = 0; i < n1; i++) L[i] = arr[l + i];\n    for (int j = 0; j < n2; j++) R[j] = arr[m + 1 + j];\n    \n    // Merge\n    int i = 0, j = 0, k = l;\n    while (i < n1 && j < n2) {\n      if (L[i] <= R[j]) arr[k++] = L[i++];\n      else arr[k++] = R[j++];\n    }\n    \n    // Copy remaining\n    while (i < n1) arr[k++] = L[i++];\n    while (j < n2) arr[k++] = R[j++];\n  }\n  \n  static void mergeSort(int[] arr, int l, int r) {\n    if (l < r) {\n      int m = l + (r - l) / 2;  // Avoid overflow\n      mergeSort(arr, l, m);\n      mergeSort(arr, m + 1, r);\n      merge(arr, l, m, r);\n    }\n  }\n  \n  public static void main(String[] args) {\n    int[] data = {38, 27, 43, 3, 9, 82, 10};\n    mergeSort(data, 0, data.length-1);\n    System.out.println(Arrays.toString(data)); // [3,9,10,27,38,43,82]\n  }\n}"
+    },
+    "quick_sort": {
+        "defination": "Divide-and-conquer algorithm that picks a pivot, partitions the array, and recursively sorts subarrays.",
+        "explanation": "Like organizing books: Pick a book (pivot), put smaller books left, larger right, then sort each pile separately.",
+        "syntax": "quickSort(arr, low, high):\n  if low < high:\n    pi = partition(arr, low, high)\n    quickSort(arr, low, pi-1)\n    quickSort(arr, pi+1, high)",
+        "code": "public class Main {\n  \n  static int partition(int[] arr, int low, int high) {\n    int pivot = arr[high];  // Choose last element as pivot\n    int i = low - 1;  // Index of smaller element\n    \n    for (int j = low; j < high; j++) {\n      if (arr[j] < pivot) {\n        i++;\n        // Swap arr[i] and arr[j]\n        int temp = arr[i];\n        arr[i] = arr[j];\n        arr[j] = temp;\n      }\n    }\n    \n    // Swap pivot into correct position\n    int temp = arr[i+1];\n    arr[i+1] = arr[high];\n    arr[high] = temp;\n    \n    return i + 1;  // Pivot index\n  }\n  \n  static void quickSort(int[] arr, int low, int high) {\n    if (low < high) {\n      int pi = partition(arr, low, high);  // Partitioning index\n      quickSort(arr, low, pi - 1);\n      quickSort(arr, pi + 1, high);\n    }\n  }\n  \n  public static void main(String[] args) {\n    int[] data = {10, 80, 30, 90, 40, 50, 70};\n    quickSort(data, 0, data.length-1);\n    System.out.println(Arrays.toString(data)); // [10,30,40,50,70,80,90]\n  }\n}"
+    },
+    "linear_search": {
+        "defination": "Sequentially checks each element until a match is found or the list is exhausted.",
+        "explanation": "Like finding a name in an unsorted phonebook: Start from first page and scan each name until found.",
+        "syntax": "for (each element in array)\n  if element == target: return index\nreturn -1",
+        "code": "public class Main {\n  static int linearSearch(int[] arr, int target) {\n    for (int i = 0; i < arr.length; i++) {\n      if (arr[i] == target) {\n        return i;  // Found at index i\n      }\n    }\n    return -1;  // Not found\n  }\n  \n  public static void main(String[] args) {\n    int[] data = {4, 2, 9, 6, 23, 12};\n    int target = 6;\n    int result = linearSearch(data, target);\n    System.out.println(\"Element found at index: \" + result);  // 3\n  }\n}"
+    },
+    "binary_search": {
+        "defination": "Efficiently finds an item in a sorted array by repeatedly dividing the search interval in half.",
+        "explanation": "Like guessing a number 1-100: Ask \"Is it 50?\" (mid), if higher, search 51-100 (right half); if lower, search 1-49 (left half).",
+        "syntax": "low = 0, high = n-1\nwhile low <= high:\n  mid = (low+high)/2\n  if arr[mid] == target: return mid\n  else if arr[mid] < target: low = mid+1\n  else: high = mid-1\nreturn -1",
+        "code": "public class Main {\n  static int binarySearch(int[] arr, int target) {\n    int low = 0;\n    int high = arr.length - 1;\n    \n    while (low <= high) {\n      int mid = low + (high - low) / 2;  // Avoid overflow\n      \n      if (arr[mid] == target) return mid;  // Found\n      else if (arr[mid] < target) low = mid + 1;  // Search right half\n      else high = mid - 1;  // Search left half\n    }\n    return -1;  // Not found\n  }\n  \n  public static void main(String[] args) {\n    int[] data = {2, 5, 8, 12, 16, 23, 38, 56};\n    int target = 23;\n    int result = binarySearch(data, target);\n    System.out.println(\"Element found at index: \" + result);  // 5\n  }\n}"
+    },
+    "strings_basic": {
+        "defination": "Algorithms for string manipulation: reversal, substring search, palindrome checks.",
+        "explanation": "Like text editing: Reverse a sentence, find a word in a document, or check if a word reads the same backward (palindrome).",
+        "syntax": "String methods, character arrays, two pointers",
+        "code": "public class Main {\n  \n  // Reverse a string\n  static String reverse(String s) {\n    char[] chars = s.toCharArray();\n    int left = 0, right = chars.length - 1;\n    while (left < right) {\n      char temp = chars[left];\n      chars[left] = chars[right];\n      chars[right] = temp;\n      left++;\n      right--;\n    }\n    return new String(chars);\n  }\n  \n  // Check palindrome\n  static boolean isPalindrome(String s) {\n    int left = 0, right = s.length() - 1;\n    while (left < right) {\n      if (s.charAt(left) != s.charAt(right)) return false;\n      left++;\n      right--;\n    }\n    return true;\n  }\n  \n  public static void main(String[] args) {\n    System.out.println(reverse(\"hello\"));  // \"olleh\"\n    System.out.println(isPalindrome(\"racecar\"));  // true\n  }\n}"
+    },
+    "linked_list": {
+        "introduction": {
+            "defination": "A linear data structure where elements (nodes) are linked using pointers. Each node contains data and a reference to the next node.",
+            "explanation": "Like a treasure hunt: Each clue (node) points to the next location (next node), forming a chain.",
+            "syntax": "class Node { int data; Node next; }",
+            "code": "class Node {\n  int data;\n  Node next;\n  \n  Node(int data) {\n    this.data = data;\n    this.next = null;\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    // Create nodes\n    Node head = new Node(1);\n    Node second = new Node(2);\n    Node third = new Node(3);\n    \n    // Link nodes\n    head.next = second;\n    second.next = third;\n    \n    // Traverse list\n    Node current = head;\n    while (current != null) {\n      System.out.print(current.data + \" -> \");\n      current = current.next;\n    }\n    System.out.println(\"null\");\n  }\n}"
+        },
+        "singly_linked_list": {
+            "defination": "A linked list where each node points only to the next node, forming a unidirectional chain.",
+            "explanation": "Like a conga line: Each person (node) holds the shoulders of the next person (next pointer), moving only forward.",
+            "syntax": "class Node { int data; Node next; }",
+            "code": "// (See introduction for basic implementation)\n// Additional: Insertion at head\npublic class Main {\n  static Node insertAtHead(Node head, int data) {\n    Node newNode = new Node(data);\n    newNode.next = head;  // New node points to old head\n    return newNode;       // New node becomes head\n  }\n  \n  public static void main(String[] args) {\n    Node head = new Node(1);\n    head = insertAtHead(head, 2);  // Insert 2 at head\n    // List: 2 -> 1 -> null\n  }\n}"
+        },
+        "doubly_linked_list": {
+            "defination": "A linked list where each node has pointers to both next and previous nodes, enabling bidirectional traversal.",
+            "explanation": "Like a subway system: Each station (node) has a link to next and previous stations, allowing travel in both directions.",
+            "syntax": "class Node { int data; Node next; Node prev; }",
+            "code": "class Node {\n  int data;\n  Node next, prev;\n  \n  Node(int data) {\n    this.data = data;\n    this.next = this.prev = null;\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Node head = new Node(1);\n    Node second = new Node(2);\n    Node third = new Node(3);\n    \n    // Link forward\n    head.next = second;\n    second.next = third;\n    \n    // Link backward\n    third.prev = second;\n    second.prev = head;\n    \n    // Traverse forward\n    Node current = head;\n    while (current != null) {\n      System.out.print(current.data + \" -> \");\n      current = current.next;\n    }\n    System.out.println(\"null\");\n    \n    // Traverse backward\n    current = third;\n    while (current != null) {\n      System.out.print(current.data + \" <- \");\n      current = current.prev;\n    }\n    System.out.println(\"null\");\n  }\n}"
+        },
+        "circular_linked_list": {
+            "defination": "A linked list where the last node points back to the first node, forming a loop.",
+            "explanation": "Like a circular train route: The last station connects back to the first, allowing continuous loops.",
+            "syntax": "last.next = head;",
+            "code": "public class Main {\n  public static void main(String[] args) {\n    Node head = new Node(1);\n    Node second = new Node(2);\n    Node third = new Node(3);\n    \n    head.next = second;\n    second.next = third;\n    third.next = head;  // Circular link\n    \n    // Traverse (stop when back at head)\n    Node current = head;\n    do {\n      System.out.print(current.data + \" -> \");\n      current = current.next;\n    } while (current != head);\n    System.out.println(\"head\");\n  }\n}"
+        },
+        "insertion": {
+            "defination": "Adding a node at a specified position (head, tail, or middle) in a linked list.",
+            "explanation": "Like adding a new car to a train: Insert at front (engine), middle (between cars), or end (caboose).",
+            "syntax": "Insert head: newNode.next = head; head = newNode;\nInsert middle: newNode.next = prev.next; prev.next = newNode;",
+            "code": "// Insert at tail\nstatic Node insertAtTail(Node head, int data) {\n  Node newNode = new Node(data);\n  if (head == null) return newNode;\n  \n  Node current = head;\n  while (current.next != null) {\n    current = current.next;\n  }\n  current.next = newNode;\n  return head;\n}\n\n// Insert after a node\nstatic void insertAfter(Node prevNode, int data) {\n  if (prevNode == null) return;\n  Node newNode = new Node(data);\n  newNode.next = prevNode.next;\n  prevNode.next = newNode;\n}"
+        },
+        "deletion": {
+            "defination": "Removing a node from a linked list by updating pointers to bypass it.",
+            "explanation": "Like removing a train car: Detach it by connecting the previous car directly to the next one.",
+            "syntax": "Delete head: head = head.next;\nDelete node: prev.next = node.next;",
+            "code": "// Delete by key\nstatic Node deleteNode(Node head, int key) {\n  // If head is to be deleted\n  if (head != null && head.data == key) {\n    return head.next;\n  }\n  \n  Node current = head, prev = null;\n  while (current != null && current.data != key) {\n    prev = current;\n    current = current.next;\n  }\n  \n  // Key not found\n  if (current == null) return head;\n  \n  // Unlink node\n  prev.next = current.next;\n  return head;\n}"
+        },
+        "reversal": {
+            "defination": "Reversing the direction of pointers in a linked list.",
+            "explanation": "Like reversing a conga line: Each person turns around to face the opposite direction, changing the order.",
+            "syntax": "Node prev = null;\nNode current = head;\nwhile (current != null) {\n  Node next = current.next;\n  current.next = prev;\n  prev = current;\n  current = next;\n}\nhead = prev;",
+            "code": "static Node reverseList(Node head) {\n  Node prev = null;\n  Node current = head;\n  \n  while (current != null) {\n    Node nextTemp = current.next;  // Save next node\n    current.next = prev;           // Reverse pointer\n    prev = current;                // Move pointers forward\n    current = nextTemp;\n  }\n  return prev;  // New head\n}"
+        },
+        "cycle_detection": {
+            "defination": "Determining if a linked list contains a cycle using Floyd's Tortoise and Hare algorithm.",
+            "explanation": "Like two runners on a track: Fast runner (hare) laps slow runner (tortoise) if there's a loop.",
+            "syntax": "slow = head; fast = head;\nwhile (fast != null && fast.next != null) {\n  slow = slow.next;\n  fast = fast.next.next;\n  if (slow == fast) return true; // cycle\n}\nreturn false;",
+            "code": "static boolean hasCycle(Node head) {\n  if (head == null) return false;\n  \n  Node slow = head;\n  Node fast = head.next;\n  \n  while (fast != null && fast.next != null) {\n    if (slow == fast) return true;  // Cycle detected\n    slow = slow.next;      // Moves 1 step\n    fast = fast.next.next; // Moves 2 steps\n  }\n  return false;  // No cycle\n}"
+        }
+    },
+    "stack": {
+        "introduction": {
+            "defination": "A LIFO (Last-In-First-Out) data structure where elements are added/removed from the top.",
+            "explanation": "Like a stack of plates: You add (push) or remove (pop) plates from the top only.",
+            "syntax": "Stack<Type> stack = new Stack<>();\nstack.push(element); stack.pop(); stack.peek();",
+            "code": "import java.util.Stack;\n\npublic class Main {\n  public static void main(String[] args) {\n    Stack<Integer> stack = new Stack<>();\n    \n    // Push elements\n    stack.push(10);\n    stack.push(20);\n    stack.push(30);\n    \n    // Pop top element\n    System.out.println(stack.pop());  // 30\n    \n    // Peek top element\n    System.out.println(stack.peek()); // 20\n    \n    // Check if empty\n    System.out.println(stack.isEmpty()); // false\n  }\n}"
+        },
+        "operations": {
+            "defination": "Basic stack operations: push (add to top), pop (remove from top), peek (view top without removal).",
+            "explanation": "Push = Placing a new plate on top. Pop = Taking the top plate. Peek = Looking at the top plate without taking it.",
+            "syntax": "push(item), pop(), peek(), isEmpty(), size()",
+            "code": "// (See introduction for common operations)\n// Manual implementation\nclass MyStack {\n  private int maxSize;\n  private int[] stackArray;\n  private int top;\n  \n  MyStack(int size) {\n    maxSize = size;\n    stackArray = new int[maxSize];\n    top = -1;\n  }\n  \n  void push(int value) {\n    if (top < maxSize-1) stackArray[++top] = value;\n  }\n  \n  int pop() {\n    if (top >= 0) return stackArray[top--];\n    return -1; // Underflow\n  }\n  \n  int peek() {\n    return stackArray[top];\n  }\n  \n  boolean isEmpty() {\n    return (top == -1);\n  }\n}"
+        },
+        "implementation_using_array": {
+            "defination": "Implementing stack using a fixed-size array with push/pop operations.",
+            "explanation": "Like a fixed tray: Plates (elements) are stacked within a limited space (array size).",
+            "syntax": "Use an array and a top pointer (index).",
+            "code": "class ArrayStack {\n  private int maxSize;\n  private int[] stack;\n  private int top;\n  \n  ArrayStack(int size) {\n    maxSize = size;\n    stack = new int[maxSize];\n    top = -1;  // Empty stack\n  }\n  \n  void push(int value) {\n    if (top == maxSize-1) {\n      System.out.println(\"Stack overflow!\");\n      return;\n    }\n    stack[++top] = value;  // Increment top, then insert\n  }\n  \n  int pop() {\n    if (isEmpty()) {\n      System.out.println(\"Stack underflow!\");\n      return -1;\n    }\n    return stack[top--];  // Return top, then decrement\n  }\n  \n  int peek() {\n    if (isEmpty()) return -1;\n    return stack[top];\n  }\n  \n  boolean isEmpty() {\n    return top == -1;\n  }\n}"
+        },
+        "implementation_using_linked_list": {
+            "defination": "Implementing stack using linked list nodes with dynamic memory allocation.",
+            "explanation": "Like an unlimited stack: Each new plate (node) is added to the top, linked to the previous top.",
+            "syntax": "Node top;\npush: newNode.next = top; top = newNode;\npop: temp = top; top = top.next; return temp.data;",
+            "code": "class StackNode {\n  int data;\n  StackNode next;\n  \n  StackNode(int data) {\n    this.data = data;\n  }\n}\n\nclass LinkedListStack {\n  private StackNode top;\n  \n  void push(int data) {\n    StackNode newNode = new StackNode(data);\n    newNode.next = top;\n    top = newNode;\n  }\n  \n  int pop() {\n    if (isEmpty()) return -1;\n    int data = top.data;\n    top = top.next;\n    return data;\n  }\n  \n  int peek() {\n    if (isEmpty()) return -1;\n    return top.data;\n  }\n  \n  boolean isEmpty() {\n    return top == null;\n  }\n}"
+        },
+        "applications": {
+            "defination": "Common uses: Undo/redo features, backtracking, function call stack, expression evaluation.",
+            "explanation": "Undo in editors: Each action (push) can be undone (pop) in reverse order.",
+            "syntax": "Expression evaluation: Use two stacks (operands, operators)",
+            "code": "// Balanced parentheses\npublic class Main {\n  static boolean isBalanced(String expr) {\n    Stack<Character> stack = new Stack<>();\n    \n    for (char c : expr.toCharArray()) {\n      if (c == '(' || c == '[' || c == '{') {\n        stack.push(c);\n      } else if (c == ')' && !stack.isEmpty() && stack.peek() == '(') {\n        stack.pop();\n      } else if (c == ']' && !stack.isEmpty() && stack.peek() == '[') {\n        stack.pop();\n      } else if (c == '}' && !stack.isEmpty() && stack.peek() == '{') {\n        stack.pop();\n      } else {\n        return false;  // Unmatched closing bracket\n      }\n    }\n    return stack.isEmpty();  // All brackets matched\n  }\n  \n  public static void main(String[] args) {\n    System.out.println(isBalanced(\"({[]})\"));  // true\n    System.out.println(isBalanced(\"([)]\"));    // false\n  }\n}"
+        }
+    },
+    "queue": {
+        "introduction": {
+            "defination": "A FIFO (First-In-First-Out) data structure where elements are added at the rear and removed from the front.",
+            "explanation": "Like a ticket queue: First person in line (front) gets served first; new people join at the end (rear).",
+            "syntax": "Queue<Type> queue = new LinkedList<>();\nqueue.add(element); queue.remove(); queue.peek();",
+            "code": "import java.util.LinkedList;\nimport java.util.Queue;\n\npublic class Main {\n  public static void main(String[] args) {\n    Queue<Integer> queue = new LinkedList<>();\n    \n    // Add elements (enqueue)\n    queue.add(10);\n    queue.add(20);\n    queue.add(30);\n    \n    // Remove front element (dequeue)\n    System.out.println(queue.remove());  // 10\n    \n    // Peek front element\n    System.out.println(queue.peek());    // 20\n  }\n}"
+        },
+        "operations": {
+            "defination": "Basic operations: enqueue (add to rear), dequeue (remove from front), front/peek (view front without removal).",
+            "explanation": "Enqueue = Joining the end of a line. Dequeue = Serving the first person in line. Front = Checking who's next.",
+            "syntax": "enqueue(item), dequeue(), front(), isEmpty(), size()",
+            "code": "// Manual implementation\nclass MyQueue {\n  private int front, rear, size;\n  private int capacity;\n  private int[] array;\n  \n  MyQueue(int capacity) {\n    this.capacity = capacity;\n    array = new int[capacity];\n    front = size = 0;\n    rear = capacity - 1;  // For circular queue\n  }\n  \n  void enqueue(int item) {\n    if (isFull()) return;\n    rear = (rear + 1) % capacity;\n    array[rear] = item;\n    size++;\n  }\n  \n  int dequeue() {\n    if (isEmpty()) return -1;\n    int item = array[front];\n    front = (front + 1) % capacity;\n    size--;\n    return item;\n  }\n  \n  int front() {\n    if (isEmpty()) return -1;\n    return array[front];\n  }\n  \n  boolean isEmpty() {\n    return size == 0;\n  }\n  \n  boolean isFull() {\n    return size == capacity;\n  }\n}"
+        },
+        "array_implementation": {
+            "defination": "Implementing a queue using a fixed-size array with circular buffering to handle wrap-around.",
+            "explanation": "Like a circular conveyor belt: When the belt end is reached, new items are placed at the start if space is available.",
+            "syntax": "Use array, front, rear pointers, and modulo arithmetic.",
+            "code": "class CircularQueue {\n  private int[] queue;\n  private int front, rear, size, capacity;\n  \n  CircularQueue(int k) {\n    capacity = k;\n    queue = new int[capacity];\n    front = rear = -1;\n    size = 0;\n  }\n  \n  boolean enqueue(int value) {\n    if (isFull()) return false;\n    if (isEmpty()) front = 0;\n    rear = (rear + 1) % capacity;\n    queue[rear] = value;\n    size++;\n    return true;\n  }\n  \n  int dequeue() {\n    if (isEmpty()) return -1;\n    int value = queue[front];\n    if (front == rear) {\n      front = rear = -1;  // Reset\n    } else {\n      front = (front + 1) % capacity;\n    }\n    size--;\n    return value;\n  }\n  \n  int front() {\n    return isEmpty() ? -1 : queue[front];\n  }\n  \n  boolean isEmpty() {\n    return size == 0;\n  }\n  \n  boolean isFull() {\n    return size == capacity;\n  }\n}"
+        },
+        "linked_list_implementation": {
+            "defination": "Implementing queue using linked list nodes with dynamic memory allocation.",
+            "explanation": "Like an ever-growing line: New people (nodes) join the end, while the front is served.",
+            "syntax": "Node front, rear;\nenqueue: rear.next = newNode; rear = newNode;\ndequeue: temp = front; front = front.next; return temp.data;",
+            "code": "class QueueNode {\n  int data;\n  QueueNode next;\n  \n  QueueNode(int data) {\n    this.data = data;\n  }\n}\n\nclass LinkedListQueue {\n  private QueueNode front, rear;\n  \n  void enqueue(int data) {\n    QueueNode newNode = new QueueNode(data);\n    if (rear == null) {\n      front = rear = newNode;\n      return;\n    }\n    rear.next = newNode;\n    rear = newNode;\n  }\n  \n  int dequeue() {\n    if (front == null) return -1;\n    int data = front.data;\n    front = front.next;\n    if (front == null) rear = null;  // Queue empty\n    return data;\n  }\n  \n  int peek() {\n    return (front != null) ? front.data : -1;\n  }\n  \n  boolean isEmpty() {\n    return front == null;\n  }\n}"
+        },
+        "circular_queue": {
+            "defination": "A queue that uses a fixed-size array and treats it as circular to reuse empty spaces.",
+            "explanation": "Like a circular bus route: Buses pick up passengers at stops in a loop, reusing empty spots.",
+            "syntax": "rear = (rear + 1) % capacity; front = (front + 1) % capacity;",
+            "code": "// See 'array_implementation' for CircularQueue implementation"
+        },
+        "deque": {
+            "defination": "Double-ended queue allowing insertion/deletion at both front and rear.",
+            "explanation": "Like a line where VIPs can cut to the front or new people join at the end.",
+            "syntax": "Deque<Type> deque = new ArrayDeque<>();\ndeque.addFirst(); deque.addLast(); deque.removeFirst(); deque.removeLast();",
+            "code": "import java.util.Deque;\nimport java.util.ArrayDeque;\n\npublic class Main {\n  public static void main(String[] args) {\n    Deque<Integer> deque = new ArrayDeque<>();\n    \n    deque.addFirst(10);  // Front: 10\n    deque.addLast(20);   // Front: 10, Rear: 20\n    deque.addFirst(5);   // Front: 5, 10, 20\n    \n    System.out.println(deque.removeFirst());  // 5\n    System.out.println(deque.removeLast());   // 20\n  }\n}"
+        }
+    },
+    "hashing": {
+        "defination": "Technique to map data to fixed-size tables (hash tables) for efficient lookup/insertion.",
+        "explanation": "Like a library catalog: Books (data) are assigned shelf locations (hash) using a catalog system (hash function).",
+        "syntax": "index = hash_function(key) % table_size",
+        "code": "// Simple hash function for strings\npublic class Main {\n  static int hash(String key, int tableSize) {\n    int hashVal = 0;\n    for (int i = 0; i < key.length(); i++) {\n      hashVal = 31 * hashVal + key.charAt(i);\n    }\n    return Math.abs(hashVal) % tableSize;\n  }\n  \n  public static void main(String[] args) {\n    String key = \"hello\";\n    int index = hash(key, 100);\n    System.out.println(\"Hash index: \" + index);\n  }\n}"
+    },
+    "hashmap": {
+        "defination": "A data structure implementing key-value mappings using hashing for average O(1) operations.",
+        "explanation": "Like a dictionary: Quickly find a word (key) to get its meaning (value) without scanning all entries.",
+        "syntax": "HashMap<Key, Value> map = new HashMap<>();\nmap.put(key, value); map.get(key);",
+        "code": "import java.util.HashMap;\n\npublic class Main {\n  public static void main(String[] args) {\n    HashMap<String, Integer> scores = new HashMap<>();\n    \n    // Insert key-value pairs\n    scores.put(\"Alice\", 95);\n    scores.put(\"Bob\", 87);\n    \n    // Retrieve value\n    System.out.println(scores.get(\"Alice\"));  // 95\n    \n    // Check if key exists\n    System.out.println(scores.containsKey(\"Charlie\"));  // false\n    \n    // Handle collisions (Java handles internally via linked lists/trees)\n  }\n}"
+    },
+    "trees": {
+        "introduction": {
+            "defination": "A hierarchical data structure with nodes connected by edges, starting from a root node.",
+            "explanation": "Like a company org chart: CEO (root) has managers (children), who have employees (leaves).",
+            "syntax": "class Node { int data; Node left; Node right; }",
+            "code": "class TreeNode {\n  int data;\n  TreeNode left, right;\n  \n  TreeNode(int data) {\n    this.data = data;\n    left = right = null;\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    TreeNode root = new TreeNode(1);\n    root.left = new TreeNode(2);\n    root.right = new TreeNode(3);\n    root.left.left = new TreeNode(4);\n    // Tree structure:\n    //     1\n    //    / \\\n    //   2   3\n    //  /\n    // 4\n  }\n}"
+        },
+        "binary_tree": {
+            "defination": "A tree where each node has at most two children (left and right).",
+            "explanation": "Like a family tree: Each person (node) has at most two children (left/right).",
+            "syntax": "class Node { int data; Node left; Node right; }",
+            "code": "// (See tree introduction for basic structure)\n// Traversal methods (inorder, preorder, postorder) covered in traversals"
+        },
+        "binary_search_tree": {
+            "defination": "A binary tree where left subtree values < node value < right subtree values for all nodes.",
+            "explanation": "Like a dictionary: Words starting with A-M (left) come before N-Z (right) at each node.",
+            "syntax": "Insert/search: compare value, go left if smaller, right if larger",
+            "code": "class BST {\n  class Node {\n    int key;\n    Node left, right;\n    \n    Node(int key) {\n      this.key = key;\n    }\n  }\n  \n  Node root;\n  \n  void insert(int key) {\n    root = insertRec(root, key);\n  }\n  \n  Node insertRec(Node root, int key) {\n    if (root == null) return new Node(key);\n    \n    if (key < root.key) root.left = insertRec(root.left, key);\n    else if (key > root.key) root.right = insertRec(root.right, key);\n    \n    return root;\n  }\n  \n  // Search method would be similar\n}"
+        },
+        "preorder_traversal": {
+            "defination": "Visit root, then left subtree, then right subtree (Root-Left-Right).",
+            "explanation": "Like printing a document: Print current page (root), then left section, then right section.",
+            "syntax": "preorder(node):\n  if node != null:\n    visit(node)\n    preorder(node.left)\n    preorder(node.right)",
+            "code": "void preorder(TreeNode node) {\n  if (node != null) {\n    System.out.print(node.data + \" \");  // Visit root\n    preorder(node.left);                // Traverse left\n    preorder(node.right);               // Traverse right\n  }\n}"
+        },
+        "inorder_traversal": {
+            "defination": "Visit left subtree, then root, then right subtree (Left-Root-Right). Outputs sorted order in BST.",
+            "explanation": "Like reading a book: Left page first, then current page, then right page.",
+            "syntax": "inorder(node):\n  if node != null:\n    inorder(node.left)\n    visit(node)\n    inorder(node.right)",
+            "code": "void inorder(TreeNode node) {\n  if (node != null) {\n    inorder(node.left);                // Traverse left\n    System.out.print(node.data + \" \"); // Visit root\n    inorder(node.right);               // Traverse right\n  }\n}"
+        },
+        "postorder_traversal": {
+            "defination": "Visit left subtree, then right subtree, then root (Left-Right-Root).",
+            "explanation": "Like cleaning a room: Clean left side first, then right side, then the center.",
+            "syntax": "postorder(node):\n  if node != null:\n    postorder(node.left)\n    postorder(node.right)\n    visit(node)",
+            "code": "void postorder(TreeNode node) {\n  if (node != null) {\n    postorder(node.left);              // Traverse left\n    postorder(node.right);             // Traverse right\n    System.out.print(node.data + \" \"); // Visit root\n  }\n}"
+        },
+        "level_order_traversal": {
+            "defination": "Visit nodes level by level from root to leaves, left to right.",
+            "explanation": "Like boarding a plane: First class (level 1) boards first, then business (level 2), then economy (level 3).",
+            "syntax": "Use a queue:\n  queue.add(root)\n  while queue not empty:\n    node = queue.remove()\n    visit(node)\n    if node.left != null: queue.add(node.left)\n    if node.right != null: queue.add(node.right)",
+            "code": "void levelOrder(TreeNode root) {\n  if (root == null) return;\n  \n  Queue<TreeNode> queue = new LinkedList<>();\n  queue.add(root);\n  \n  while (!queue.isEmpty()) {\n    TreeNode node = queue.poll();\n    System.out.print(node.data + \" \");\n    \n    if (node.left != null) queue.add(node.left);\n    if (node.right != null) queue.add(node.right);\n  }\n}"
+        },
+        "heap": {
+            "defination": "A complete binary tree where parent nodes satisfy heap property (min-heap: parent <= children, max-heap: parent >= children).",
+            "explanation": "Like a corporate ladder: Min-heap = CEO (min) at top; Max-heap = highest-paid at top.",
+            "syntax": "Represented as array: parent[i] = (i-1)/2, left[i] = 2*i+1, right[i] = 2*i+2",
+            "code": "class MinHeap {\n  private int[] heap;\n  private int size;\n  private int capacity;\n  \n  MinHeap(int capacity) {\n    this.capacity = capacity;\n    heap = new int[capacity];\n    size = 0;\n  }\n  \n  void insert(int key) {\n    if (size == capacity) return;\n    \n    heap[size] = key;\n    int current = size;\n    size++;\n    \n    // Heapify up\n    while (current > 0 && heap[current] < heap[parent(current)]) {\n      swap(current, parent(current));\n      current = parent(current);\n    }\n  }\n  \n  int parent(int i) { return (i-1)/2; }\n  void swap(int i, int j) { /* swap elements */ }\n}"
+        }
+    },
+    "graphs": {
+        "introduction": {
+            "defination": "A collection of nodes (vertices) connected by edges. Can be directed/undirected, weighted/unweighted.",
+            "explanation": "Like social networks: People (vertices) connected by friendships (edges).",
+            "syntax": "Representations: adjacency matrix, adjacency list",
+            "code": "// Using adjacency list\nimport java.util.*;\n\nclass Graph {\n  private int V;  // Number of vertices\n  private LinkedList<Integer>[] adj;  // Adjacency list\n  \n  Graph(int v) {\n    V = v;\n    adj = new LinkedList[v];\n    for (int i = 0; i < v; i++) {\n      adj[i] = new LinkedList();\n    }\n  }\n  \n  void addEdge(int v, int w) {\n    adj[v].add(w);\n    // For undirected: adj[w].add(v);\n  }\n}"
+        },
+        "adjacency_matrix": {
+            "defination": "A 2D array where matrix[i][j] indicates an edge from vertex i to j (and optionally weight).",
+            "explanation": "Like a flight connectivity table: Row i, column j = 1 if direct flight from city i to j.",
+            "syntax": "int[][] adjMatrix = new int[V][V];\nadjMatrix[i][j] = 1; // Edge from i to j",
+            "code": "public class Main {\n  public static void main(String[] args) {\n    int V = 4;\n    int[][] graph = new int[V][V];\n    \n    // Add edges\n    graph[0][1] = 1;  // Edge 0->1\n    graph[0][2] = 1;  // Edge 0->2\n    graph[1][2] = 1;  // Edge 1->2\n    graph[2][0] = 1;  // Edge 2->0\n    graph[2][3] = 1;  // Edge 2->3\n    graph[3][3] = 1;  // Self-loop\n    \n    // Print neighbors of vertex 2\n    for (int j = 0; j < V; j++) {\n      if (graph[2][j] == 1) System.out.print(j + \" \");  // 0,3\n    }\n  }\n}"
+        },
+        "adjacency_list": {
+            "defination": "An array of lists where each list stores neighbors of a vertex.",
+            "explanation": "Like a contact list: Each person (vertex) has a list of direct friends (neighbors).",
+            "syntax": "List<Integer>[] adj = new List[V];\nadj[i] = new ArrayList<>();\nadj[i].add(j); // Add edge i->j",
+            "code": "// See graph introduction for implementation"
+        },
+        "bfs": {
+            "defination": "Breadth-First Search explores neighbor nodes level by level using a queue.",
+            "explanation": "Like ripples in water: Start from a stone (root), visit all close points first before moving outward.",
+            "syntax": "queue.add(start)\nvisited[start] = true\nwhile queue not empty:\n  node = queue.remove()\n  visit(node)\n  for each neighbor of node:\n    if not visited: queue.add(neighbor), visited[neighbor]=true",
+            "code": "void BFS(int start) {\n  boolean[] visited = new boolean[V];\n  Queue<Integer> queue = new LinkedList<>();\n  \n  visited[start] = true;\n  queue.add(start);\n  \n  while (!queue.isEmpty()) {\n    int node = queue.poll();\n    System.out.print(node + \" \");\n    \n    for (int neighbor : adj[node]) {\n      if (!visited[neighbor]) {\n        visited[neighbor] = true;\n        queue.add(neighbor);\n      }\n    }\n  }\n}"
+        },
+        "dfs": {
+            "defination": "Depth-First Search explores as far as possible along each branch before backtracking.",
+            "explanation": "Like exploring a maze: Go down one path until dead end, then backtrack to last junction.",
+            "syntax": "visited[start] = true\nvisit(start)\nfor each neighbor of start:\n  if not visited: DFS(neighbor)",
+            "code": "void DFS(int v, boolean[] visited) {\n  visited[v] = true;\n  System.out.print(v + \" \");\n  \n  for (int neighbor : adj[v]) {\n    if (!visited[neighbor]) {\n      DFS(neighbor, visited);\n    }\n  }\n}"
+        },
+        "cycle_detection": {
+            "defination": "Determining if a graph contains a cycle using DFS or BFS.",
+            "explanation": "Like detecting circular references: If you return to a visited node via a different path, a cycle exists.",
+            "syntax": "For undirected: If neighbor is visited and not parent, cycle exists.\nFor directed: Use recursion stack.",
+            "code": "// Undirected graph cycle detection\nboolean hasCycleUndirected() {\n  boolean[] visited = new boolean[V];\n  for (int i = 0; i < V; i++) {\n    if (!visited[i] && isCyclicUtil(i, visited, -1))\n      return true;\n  }\n  return false;\n}\n\nboolean isCyclicUtil(int v, boolean[] visited, int parent) {\n  visited[v] = true;\n  \n  for (int neighbor : adj[v]) {\n    if (!visited[neighbor]) {\n      if (isCyclicUtil(neighbor, visited, v)) return true;\n    } else if (neighbor != parent) {  // Back edge to non-parent\n      return true;\n    }\n  }\n  return false;\n}"
+        }
+    },
+    "dynamic_programming": {
+        "introduction": {
+            "defination": "Solving complex problems by breaking them into overlapping subproblems and storing results to avoid recomputation.",
+            "explanation": "Like a recipe book: Store solutions to common subproblems (chopping onions) instead of redoing each time.",
+            "syntax": "Top-down (memoization) or bottom-up (tabulation)",
+            "code": "// Fibonacci without DP (inefficient)\nint fib(int n) {\n  if (n <= 1) return n;\n  return fib(n-1) + fib(n-2);  // Recomputes values\n}\n\n// Fibonacci with memoization (top-down)\nint fibMemo(int n, int[] memo) {\n  if (n <= 1) return n;\n  if (memo[n] != 0) return memo[n];\n  memo[n] = fibMemo(n-1, memo) + fibMemo(n-2, memo);\n  return memo[n];\n}"
+        },
+        "fibonacci": {
+            "defination": "Classic DP problem: F(n) = F(n-1) + F(n-2), with F(0)=0, F(1)=1.",
+            "explanation": "Like breeding rabbits: Each month, pairs produce new pairs following the Fibonacci sequence.",
+            "syntax": "dp[0]=0, dp[1]=1, dp[i]=dp[i-1]+dp[i-2] for i>=2",
+            "code": "int fibonacci(int n) {\n  if (n == 0) return 0;\n  int[] dp = new int[n+1];\n  dp[0] = 0; dp[1] = 1;\n  \n  for (int i = 2; i <= n; i++) {\n    dp[i] = dp[i-1] + dp[i-2];\n  }\n  return dp[n];\n}"
+        },
+        "knapsack": {
+            "defination": "Select items with given weights/values to maximize value without exceeding weight capacity.",
+            "explanation": "Like packing a suitcase: Choose items (clothes) to maximize value while staying under weight limit.",
+            "syntax": "dp[i][w] = max(value[i] + dp[i-1][w-weight[i]], dp[i-1][w])",
+            "code": "int knapsack(int W, int[] wt, int[] val, int n) {\n  int[][] dp = new int[n+1][W+1];\n  \n  for (int i = 1; i <= n; i++) {\n    for (int w = 1; w <= W; w++) {\n      if (wt[i-1] <= w) {\n        dp[i][w] = Math.max(val[i-1] + dp[i-1][w - wt[i-1]], dp[i-1][w]);\n      } else {\n        dp[i][w] = dp[i-1][w];\n      }\n    }\n  }\n  return dp[n][W];\n}"
+        },
+        "longest_increasing_subsequence": {
+            "defination": "Find the longest subsequence (not necessarily contiguous) where elements are in increasing order.",
+            "explanation": "Like stacking dolls: Find largest sequence where each doll fits inside the next larger one in order.",
+            "syntax": "dp[i] = 1 + max(dp[j]) for all j < i where arr[j] < arr[i]",
+            "code": "int lengthOfLIS(int[] nums) {\n  if (nums.length == 0) return 0;\n  int[] dp = new int[nums.length];\n  Arrays.fill(dp, 1);\n  int maxAns = 1;\n  \n  for (int i = 1; i < nums.length; i++) {\n    for (int j = 0; j < i; j++) {\n      if (nums[j] < nums[i]) {\n        dp[i] = Math.max(dp[i], dp[j] + 1);\n      }\n    }\n    maxAns = Math.max(maxAns, dp[i]);\n  }\n  return maxAns;\n}"
+        },
+        "coin_change": {
+            "defination": "Find the number of ways to make a sum using given coin denominations (or minimum coins).",
+            "explanation": "Like a vending machine: Count ways to return change (e.g., $1 using quarters, dimes, nickels).",
+            "syntax": "dp[0] = 1\ndp[i] += dp[i - coin] for each coin",
+            "code": "int coinChangeWays(int[] coins, int amount) {\n  int[] dp = new int[amount + 1];\n  dp[0] = 1;\n  \n  for (int coin : coins) {\n    for (int i = coin; i <= amount; i++) {\n      dp[i] += dp[i - coin];\n    }\n  }\n  return dp[amount];\n}"
+        }
+    },
+    "greedy_algorithms": {
+        "defination": "Make locally optimal choices at each step to find a global optimum. Not always optimal but efficient.",
+        "explanation": "Like playing chess: Choose the best immediate move without full lookahead.",
+        "syntax": "Sort items, then make greedy choices iteratively",
+        "code": "// Activity selection: Maximize non-overlapping activities\nint activitySelection(int[] start, int[] end) {\n  // Sort by finish time\n  int n = start.length;\n  int[][] activities = new int[n][2];\n  for (int i = 0; i < n; i++) {\n    activities[i] = new int[]{start[i], end[i]};\n  }\n  Arrays.sort(activities, (a, b) -> a[1] - b[1]);\n  \n  int count = 1;\n  int lastEnd = activities[0][1];\n  for (int i = 1; i < n; i++) {\n    if (activities[i][0] >= lastEnd) {\n      count++;\n      lastEnd = activities[i][1];\n    }\n  }\n  return count;\n}"
+    },
+    "backtracking": {
+        "defination": "Systematically explore solution space by building candidates and abandoning partial candidates (backtrack) if they cannot lead to a valid solution.",
+        "explanation": "Like solving a maze: Try a path; if stuck, backtrack to last junction and try a different path.",
+        "syntax": "void backtrack(candidate):\n  if candidate is solution: output\n  else:\n    for each extension of candidate:\n      if valid: backtrack(extension)",
+        "code": "// N-Queens: Place queens so none attack each other\nclass NQueens {\n  void solveNQ(int n) {\n    int[][] board = new int[n][n];\n    if (placeQueens(board, 0, n)) {\n      printSolution(board);\n    }\n  }\n  \n  boolean placeQueens(int[][] board, int col, int n) {\n    if (col >= n) return true;  // All queens placed\n    \n    for (int row = 0; row < n; row++) {\n      if (isSafe(board, row, col, n)) {\n        board[row][col] = 1;  // Place queen\n        \n        if (placeQueens(board, col + 1, n)) return true;\n        \n        board[row][col] = 0;  // Backtrack\n      }\n    }\n    return false;  // Trigger backtracking\n  }\n  \n  // Check if queen can be placed at (row, col)\n  boolean isSafe(int[][] board, int row, int col, int n) {\n    // Check row, columns, and diagonals\n    // Implementation omitted for brevity\n    return true;\n  }\n}"
+    },
+    "sliding_window": {
+        "defination": "Maintain a subset (window) of data that slides through a sequence to solve problems efficiently.",
+        "explanation": "Like a moving camera: Focus on a fixed-size portion of a scene (window) as it pans across.",
+        "syntax": "Initialize window\nwhile right < length:\n  Expand window right\n  while condition invalid: shrink window left\n  Update answer",
+        "code": "// Maximum sum of subarray of size k\nint maxSumSubarray(int[] arr, int k) {\n  int maxSum = 0, windowSum = 0;\n  int left = 0, right = 0;\n  \n  // Initialize first window\n  while (right < k) {\n    windowSum += arr[right++];\n  }\n  maxSum = windowSum;\n  \n  // Slide window\n  while (right < arr.length) {\n    windowSum += arr[right++] - arr[left++];  // Add right, remove left\n    maxSum = Math.max(maxSum, windowSum);\n  }\n  return maxSum;\n}"
+    },
+    "two_pointers": {
+        "defination": "Use two pointers to traverse data structures (arrays, linked lists) for efficient solutions.",
+        "explanation": "Like measuring a room with two tape measures: Move pointers inward/outward to find pairs or ranges.",
+        "syntax": "left=0, right=n-1\nwhile left < right:\n  if condition: left++ or right--\n  else: process and move",
+        "code": "// Find pair with given sum in sorted array\nint[] twoSum(int[] arr, int target) {\n  int left = 0, right = arr.length - 1;\n  while (left < right) {\n    int sum = arr[left] + arr[right];\n    if (sum == target) return new int[]{left, right};\n    else if (sum < target) left++;\n    else right--;\n  }\n  return new int[]{-1, -1};\n}"
+    },
+    "divide_and_conquer": {
+        "defination": "Break problem into smaller subproblems, solve recursively, and combine solutions.",
+        "explanation": "Like a war strategy: Divide enemy territory (problem), conquer each region (subproblem), combine victories (solution).",
+        "syntax": "solve(problem):\n  if problem small: solve directly\n  else:\n    subproblems = divide(problem)\n    solutions = [solve(sub) for sub in subproblems]\n    return combine(solutions)",
+        "code": "// Merge Sort (see sorting section) is classic divide-and-conquer"
+    },
+    "bit_manipulation": {
+        "defination": "Performing operations at the bit level (AND, OR, XOR, shifts) for efficient computation.",
+        "explanation": "Like a light switch panel: Flip individual switches (bits) to control lights (data) precisely.",
+        "syntax": "& (AND), | (OR), ^ (XOR), ~ (NOT), << (left shift), >> (right shift)",
+        "code": "public class Main {\n  public static void main(String[] args) {\n    int a = 5;    // Binary: 0101\n    int b = 3;    // Binary: 0011\n    \n    System.out.println(a & b);   // AND: 0001 = 1\n    System.out.println(a | b);   // OR: 0111 = 7\n    System.out.println(a ^ b);   // XOR: 0110 = 6\n    System.out.println(~a);      // NOT: ...1111010 (depends on bits)\n    System.out.println(a << 1);  // Left shift: 1010 = 10\n    System.out.println(a >> 1);  // Right shift: 0010 = 2\n  }\n}"
+    }
+}
