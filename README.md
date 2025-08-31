@@ -2,6 +2,7 @@
 
 A simple yet powerful chatbot built with **Streamlit** that helps students learn **Data Structures & Algorithms (DSA)** in an interactive way.  
 It can answer DSA questions, explain concepts with examples, handle follow-up queries, and even drop in some motivational quotes when you need them 💪.
+
 Demo Vedio link : https://youtu.be/azPOfQ5ul20
 
 ---
