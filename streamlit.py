@@ -77,3 +77,4 @@ if user_input:
             # Show everything as code block
             placeholder.code(displayed_text, language="python")
             time.sleep(0.01)
+
